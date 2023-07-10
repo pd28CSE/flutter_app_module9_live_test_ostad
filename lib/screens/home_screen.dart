@@ -61,13 +61,13 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
       ]
     };
 
+    foods.clear();
     List<dynamic> datas = dummyData['recipes'];
     for (Map<String, dynamic> item in datas) {
       foods.add(Food.fromJson(item));
     }
 
     setState(() {});
-    print(foods.length);
   }
 
   @override
