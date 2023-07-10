@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 
 import '../models/food.dart';
@@ -19,7 +21,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
   }
 
   void fetchData() {
-    Map<String, dynamic> dummyData = {
+    String dummyData = '''{
       "recipes": [
         {
           "title": "Pasta Carbonara",
@@ -59,10 +61,10 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
           "ingredients": ["berries", "yogurt", "granola"]
         }
       ]
-    };
+    }''';
 
     foods.clear();
-    List<dynamic> datas = dummyData['recipes'];
+    List<dynamic> datas = jsonDecode(dummyData)['recipes'];
     for (Map<String, dynamic> item in datas) {
       foods.add(Food.fromJson(item));
     }
