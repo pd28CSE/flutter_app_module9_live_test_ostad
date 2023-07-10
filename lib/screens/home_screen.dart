@@ -92,7 +92,6 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
           );
         },
       ),
-      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
