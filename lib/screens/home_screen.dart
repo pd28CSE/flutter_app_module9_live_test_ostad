@@ -80,10 +80,10 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
         itemCount: foods.length,
         itemBuilder: (cntxt, index) {
           return ListTile(
-            leading: const Icon(Icons.add),
+            leading: const Icon(Icons.fastfood),
             title: Text(
               foods[index].title,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
